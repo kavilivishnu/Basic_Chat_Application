@@ -2,37 +2,225 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.person1_div {
+  float: left; 
+  margin-left: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.person1_timeStamp {
+  margin-top: -5%;
+  margin-left: 40px;
+  margin-right: 16px;
+}
+
+.person2_div {
+  margin-left: 80%;
+}
+
+.person2_timeStamp {
+  margin-top: -5%;
+  margin-left: 40px;
+  margin-right: 16px;
+}
+
+.person1_heading_and_Name {
+  white-space: pre-line;
+}
+
+.person2_heading_and_Name {
+  white-space: pre-line;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h2 {
+    font-size: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h4 {
+    font-size: 15px;
   }
+
+  .person1_heading {
+    font-size: 25px;
+    margin-left: -15%;
+  }
+
+  .person1_date {
+    margin-left: -18%;
+  }
+
+  .person1_textArea {
+    margin-left: -25%;
+    width: 85%;
+  }
+
+  .person1_heading_and_Name {
+    white-space: pre-line;
+    margin-left: -23%;
+    font-size: 14px;
+  }
+
+  .person1_timeStamp {
+    margin-left: 30px;
+  }
+
+  .person1_toggle_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 100px;
+    height: 40px;
+    margin-left: -15%;
+  }
+
+  .person1_chat_visibility {
+    font-size: 13px;
+    margin-left: -25%;
+  }
+
+  .person1_buttons {
+    margin-right: 50%;
+    margin-left: -25%;
+    margin-top: 10px;
+  }
+
+  .person2_heading {
+    font-size: 25px;
+    margin-left: -75%;
+  }
+
+  .person2_textArea {
+    margin-left: -100%;
+    width: 185%;
+  }
+
+  .person2_send {
+    margin-left: -30%;
+  }
+
+  .person2_date {
+    margin-left: -30%;
+  }
+
+  .person2_heading_and_Name {
+    font-size: 14px;
+    margin-left: -50%;
+  }
+
+  .person2_timeStamp {
+    margin-left: -30%;
+  }
+
+  .person2_buttons {
+    margin-left: -80%;
+    margin-right: 25%;
+    margin-top: 10px;
+  }
+
+  .person2_toggle_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 100px;
+    height: 40px;
+    margin-left: -70%;
+  }
+
+  .person2_chat_visibility {
+    font-size: 13px;
+    margin-left: -100%;
+  }
+  
 }
+
+@media screen and (min-height: 1024px) {
+
+  .person1_toggle_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 100px;
+    height: 40px;
+    margin-left: 60%;
+  }
+
+  .person1_chat_visibility {
+    font-size: 13px;
+    margin-left: 45%;
+    margin-right: -50%;
+  }
+
+  .person1_heading {
+    font-size: 25px;
+    margin-left: 60%;
+    margin-right: -50%;
+  }
+
+  .person1_textArea {
+    margin-left: 45%;
+    margin-right: -100%;
+    width: 100%;
+  }
+
+  .person1_send {
+    margin-left: 80%
+  }
+
+  .person1_date {
+    margin-left: 50%;
+    margin-right: -50%;
+  }
+
+  .person1_heading_and_Name {
+    white-space: pre-line;
+    margin-left: 45%;
+    font-size: 14px;
+    margin-right: -50%;
+  }
+
+  .person1_dots {
+    margin-right: -50%;
+    margin-left: 50%
+  }
+
+  .person1_timeStamp {
+    margin-left: 110px;
+    margin-right: -50%;
+  }
+
+  .person1_buttons {
+    margin-right: -50%;
+    margin-left: 25%;
+    margin-top: 10px;
+  }
+
+  .person2_toggle_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 100px;
+    height: 40px;
+    margin-left: -50%;
+    margin-right: -30%
+  }
+
+  .person2_heading {
+    margin-left: -50%;
+  }
+
+  .person2_textArea {
+    margin-left: -50%;
+    width: 105%;
+  }
+
+  .person2_send {
+    margin-left: -5%;
+  }
+
+}
+
+

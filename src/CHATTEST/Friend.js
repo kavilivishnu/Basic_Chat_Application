@@ -120,20 +120,21 @@ function Friend() {
   // }
 
   return (
-    <div style={{ marginLeft: "80%" }}>
-      <button onClick={(e) => handleFunctionality(e)}>Show Chat</button>
-      <button onClick={() => setShowFriend(false)}>Close Chat</button>
+    <div className="person2_div" >
+      <button className="person2_toggle_buttons" onClick={(e) => handleFunctionality(e)}>Show Chat</button>
+      <button className="person2_toggle_buttons" onClick={() => setShowFriend(false)}>Close Chat</button>
       {/* <button onClick={(e) => handleClearChat(e) }>Clear Chat</button> */}
       {showFriend ? (
         <div>
-          <h1>PERSON 2</h1>
+          <h1 className="person2_heading" >PERSON 2</h1><br />
           <p> {state2.person1typing} </p>
           <textarea
             ref={inputRef}
             value={word}
             onChange={handleChange}
             rows="3"
-          />
+            className="person2_textArea"
+          /><br />
           <button
             onClick={() =>
               handleSend(
@@ -144,27 +145,22 @@ function Friend() {
                 dots,
                 secondPerson
               )
-            }
+            } className="person2_send"
           >
             Send
           </button>
-          <h4>{state2.date}</h4>
+          <h4 className="person2_date" >{state2.date}</h4>
           {state2.statusforperson2 ? (
             <div>
               {state2.person1.map((items, id) => (
                 <>
                   <div key={id}>
-                    <p>
+                    <p className="person2_heading_and_Name" >
                       <b>{items.firstperson}</b> {items.word}
                     </p>
                     <p>
                       <span
-                        style={{
-                          marginTop: "-5%",
-                          marginLeft: "40px",
-                          marginRight: "16px"
-                        }}
-                      >
+                      className="person2_timeStamp">
                         {items.timestamp}
                       </span>
                     </p>
@@ -182,14 +178,14 @@ function Friend() {
                           <div
                             style={{ display: "flex", flexDirection: "column" }}
                           >
-                            <button onClick={() => handleReply(items.word)}>
+                            <button onClick={() => handleReply(items.word)} className="person2_buttons">
                               Reply
                             </button>
                             <br />
                             <button
                               onClick={() =>
                                 dispatch(deletePerson1Message(items.id))
-                              }
+                              } className="person2_buttons"
                             >
                               Delete For Me
                             </button>
@@ -209,12 +205,12 @@ function Friend() {
             <div>
               {state2.person1.map((items, id) => (
                 <div key={id}>
-                  <p>
+                  <p className="person2_heading_and_Name">
                     <b>{items.secondperson}</b> {items.word1}
                   </p>
-                  <span style={{ marginTop: "-5%", marginLeft: "40px" }}>
+                  <span  className="person2_timeStamp" >
                     {items.timestamp1}
-                  </span>
+                  </span><br />
                   <span
                     style={{ cursor: "pointer" }}
                     onClick={() => handleOptions1(items.id)}
@@ -227,14 +223,14 @@ function Friend() {
                         <div
                           style={{ display: "flex", flexDirection: "column" }}
                         >
-                          <button onClick={() => handleReply(items.word1)}>
+                          <button onClick={() => handleReply(items.word1)} className="person2_buttons">
                             Reply
                           </button>
-                          <button onClick={() => handleDeleteForMe(items.id)}>
+                          <button onClick={() => handleDeleteForMe(items.id)} className="person2_buttons">
                             Delete For Me
                           </button>
                           <button
-                            onClick={() => handleDeleteForEveryone(items.id)}
+                            onClick={() => handleDeleteForEveryone(items.id)} className="person2_buttons"
                           >
                             Delete For Everyone
                           </button>
@@ -252,7 +248,7 @@ function Friend() {
           )}
         </div>
       ) : (
-        <h3>Person 2's Chat: HIDDEN</h3>
+        <h3 className="person2_chat_visibility" >Person 2's Chat: HIDDEN</h3>
       )}
     </div>
   );
